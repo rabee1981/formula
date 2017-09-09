@@ -8,5 +8,7 @@
 
 
 <ion-content padding>
-
+  <ion-list>
+    <button *ngFor="let item of titleList; let i = index " ion-item (click)="selected(i)">{{item}}</button>
+  </ion-list>
 </ion-content>

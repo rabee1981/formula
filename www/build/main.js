@@ -550,30 +550,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-/**
- * Generated class for the ElectroPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 var ElectroPage = (function () {
     function ElectroPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.titleList = [
+            'الكهرباء الساكنة',
+            'التيّار الكهربائي',
+            'الحقل المغناطيسي',
+            'القوّة الدافعة الكهربائية المستحثّة'
+        ];
     }
-    ElectroPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad ElectroPage');
+    ElectroPage.prototype.selected = function (index) {
+        this.navCtrl.push('FormulaPage', { title: this.titleList[index], formulaImage: "assets/formula/arabic/electro/" + index + ".png" });
     };
     return ElectroPage;
 }());
 ElectroPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-electro',template:/*ion-inline-start:"/Users/mohamadrabee/Desktop/projects/formula/src/pages/electro/electro.html"*/'<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title>الكهرومغناطيسية</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/mohamadrabee/Desktop/projects/formula/src/pages/electro/electro.html"*/,
+        selector: 'page-electro',template:/*ion-inline-start:"/Users/mohamadrabee/Desktop/projects/formula/src/pages/electro/electro.html"*/'<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title>الكهرومغناطيسية</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-list>\n    <button *ngFor="let item of titleList; let i = index " ion-item (click)="selected(i)">{{item}}</button>\n  </ion-list>\n</ion-content>'/*ion-inline-end:"/Users/mohamadrabee/Desktop/projects/formula/src/pages/electro/electro.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object])
 ], ElectroPage);
 
+var _a, _b;
 //# sourceMappingURL=electro.js.map
 
 /***/ }),
@@ -606,20 +607,26 @@ var LightPage = (function () {
     function LightPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.titleList = [
+            'البصريات الهندسية',
+            'الأمواج الميكانيكية والكهرومغناطيسية',
+            'الذرّة والنواة',
+        ];
     }
-    LightPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad LightPage');
+    LightPage.prototype.selected = function (index) {
+        this.navCtrl.push('FormulaPage', { title: this.titleList[index], formulaImage: "assets/formula/arabic/light/" + index + ".png" });
     };
     return LightPage;
 }());
 LightPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-light',template:/*ion-inline-start:"/Users/mohamadrabee/Desktop/projects/formula/src/pages/light/light.html"*/'<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title>الأشعة ّ والمادة</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/mohamadrabee/Desktop/projects/formula/src/pages/light/light.html"*/,
+        selector: 'page-light',template:/*ion-inline-start:"/Users/mohamadrabee/Desktop/projects/formula/src/pages/light/light.html"*/'<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title>الأشعة ّ والمادة</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-list>\n    <button *ngFor="let item of titleList; let i = index " ion-item (click)="selected(i)">{{item}}</button>\n  </ion-list>\n</ion-content>'/*ion-inline-end:"/Users/mohamadrabee/Desktop/projects/formula/src/pages/light/light.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object])
 ], LightPage);
 
+var _a, _b;
 //# sourceMappingURL=light.js.map
 
 /***/ }),
@@ -661,13 +668,7 @@ var MechanicPage = (function () {
             'الحركة التوافقية البسيطة',
             'الجاذبية'
         ];
-        this.formulaList = [
-            'assets/formula/arabic/mechanic/1.png',
-        ];
     }
-    MechanicPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad MechanicPage');
-    };
     MechanicPage.prototype.selected = function (index) {
         this.navCtrl.push('FormulaPage', { title: this.titleList[index], formulaImage: "assets/formula/arabic/mechanic/" + index + ".png" });
     };
@@ -678,9 +679,10 @@ MechanicPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
         selector: 'page-mechanic',template:/*ion-inline-start:"/Users/mohamadrabee/Desktop/projects/formula/src/pages/mechanic/mechanic.html"*/'<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title>ميكانيكا</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-list>\n  <button *ngFor="let item of titleList; let i = index " ion-item (click)="selected(i)">{{item}}</button>\n</ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/mohamadrabee/Desktop/projects/formula/src/pages/mechanic/mechanic.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object])
 ], MechanicPage);
 
+var _a, _b;
 //# sourceMappingURL=mechanic.js.map
 
 /***/ }),

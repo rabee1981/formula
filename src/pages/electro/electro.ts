@@ -1,25 +1,23 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the ElectroPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-electro',
   templateUrl: 'electro.html',
 })
 export class ElectroPage {
-
+  titleList : string[] =[
+    'الكهرباء الساكنة',
+    'التيّار الكهربائي',
+    'الحقل المغناطيسي',
+    'القوّة الدافعة الكهربائية المستحثّة'
+  ]
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ElectroPage');
+  selected(index) {
+    this.navCtrl.push('FormulaPage', {title : this.titleList[index] , formulaImage : `assets/formula/arabic/electro/${index}.png`})
   }
 
 }

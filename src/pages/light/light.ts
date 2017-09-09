@@ -14,12 +14,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'light.html',
 })
 export class LightPage {
-
+  titleList : string[] = [
+    'البصريات الهندسية',
+    'الأمواج الميكانيكية والكهرومغناطيسية',
+    'الذرّة والنواة',
+  ]
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LightPage');
+  selected(index) {
+    this.navCtrl.push('FormulaPage', {title : this.titleList[index] , formulaImage : `assets/formula/arabic/light/${index}.png`})
   }
 
 }

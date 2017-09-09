@@ -22,15 +22,7 @@ export class MechanicPage {
     'الحركة الدائرية',
     'الحركة التوافقية البسيطة',
     'الجاذبية']
-    formulaList : string[] = [
-      'assets/formula/arabic/mechanic/1.png',
-      
-    ]
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad MechanicPage');
   }
   selected(index) {
     this.navCtrl.push('FormulaPage', {title : this.titleList[index] , formulaImage : `assets/formula/arabic/mechanic/${index}.png`})
