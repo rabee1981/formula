@@ -1,14 +1,17 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>
-      Ionic Blank
+       قوانين الفيزياء
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-list>
+    <button ion-item (click)="selected('MechanicPage')">ميكانيكا</button>
+    <button ion-item (click)="selected('ElectroPage')">الكهرومغناطيسية</button>
+    <button ion-item (click)="selected('LightPage')">الأشعة ّ والمادة</button>
+    <button ion-item (click)="selected('ConstPage')">ثوابت أساسية</button>
+    <button ion-item (click)="selected('PlanetsPage')">معطيات الكواكب السيّارة</button>
+  </ion-list>
 </ion-content>

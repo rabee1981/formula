@@ -1,6 +1,14 @@
 // http://ionicframework.com/docs/theming/
-
-
+ion-navbar {
+    height: 50px;
+}
+ion-content {
+    background-image: url('../assets/background/background.jpg');
+}
+ion-title {
+    padding-right: 0px!important;
+    padding-left: 35px!important;
+}
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These

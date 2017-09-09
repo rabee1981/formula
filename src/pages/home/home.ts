@@ -10,5 +10,7 @@ export class HomePage {
   constructor(public navCtrl: NavController) {
 
   }
-
+  selected(choosen : string){
+    this.navCtrl.push(choosen)
+  }
 }
