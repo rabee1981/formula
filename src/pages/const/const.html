@@ -8,5 +8,24 @@
 
 
 <ion-content padding>
-
+  <ion-list>
+    <ion-item>
+      <ion-label>الرمز</ion-label>
+      <ion-select (ionChange)="onChange($event)">
+        <ion-option value="k0">k &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ثابت بولتسمان</ion-option>
+        <ion-option value="G">G &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ثابت الجاذبية</ion-option>
+        <ion-option value="k1">k &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;المعامِل في قانون كولون</ion-option>
+        <ion-option value="c">c &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;سرعة الضوء في الفراغ</ion-option>
+        <ion-option value="u0">μ₀ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;النفاذية في الفراغ</ion-option>
+        <ion-option value="e0">ε₀ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;العازلية في الفراغ</ion-option>
+        <ion-option value="e">e &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;شحنة الإلكترون</ion-option>
+        <ion-option value="h">h &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ثابت پلانك</ion-option>
+        <ion-option value="me">me &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;كتلة الإلكترون</ion-option>
+        <ion-option value="mp">mp &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;كتلة البروتون</ion-option>
+        <ion-option value="mn">mn &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;كتلة النيوترون</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <img src="assets/formula/arabic/const/00.png">
+  <img *ngIf="constImage" [src]="constImage">
 </ion-content>

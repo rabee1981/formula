@@ -8,5 +8,22 @@
 
 
 <ion-content padding>
-
+  <ion-list>
+    <ion-item>
+      <ion-label>اسم الكوكب</ion-label>
+      <ion-select (ionChange)="onChange($event)">
+        <ion-option value="0">عطارد</ion-option>
+        <ion-option value="1">الزهرة</ion-option>
+        <ion-option value="2">الأرض</ion-option>
+        <ion-option value="3">المريخ</ion-option>
+        <ion-option value="4">المشتري</ion-option>
+        <ion-option value="5">زحل</ion-option>
+        <ion-option value="6">أورانوس</ion-option>
+        <ion-option value="7">نبتون</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <img src="assets/formula/arabic/planets/00.png">
+  <img *ngIf="planetsFormulaImage" [src]="planetsFormulaImage">
+  <img *ngIf="planetImage" [src]="planetImage">
 </ion-content>

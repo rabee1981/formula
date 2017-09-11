@@ -1,25 +1,18 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the PlanetsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-planets',
   templateUrl: 'planets.html',
 })
 export class PlanetsPage {
-
+  planetsFormulaImage;
+  planetImage;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad PlanetsPage');
+  onChange(event){
+    this.planetsFormulaImage = `assets/formula/arabic/planets/${event}.png`
+    this.planetImage = `assets/formula/arabic/planets/images/1${event}.jpg`
   }
-
 }
