@@ -1,7 +1,7 @@
 <ion-header>
 
   <ion-navbar color="primary">
-    <ion-title>معطيات الكواكب السيّارة</ion-title>
+    <ion-title>معطيات اجرام المجموعه الشمسيه</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -10,8 +10,10 @@
 <ion-content padding>
   <ion-list>
     <ion-item>
-      <ion-label>اسم الكوكب</ion-label>
+      <ion-label>اسم الجرم</ion-label>
       <ion-select (ionChange)="onChange($event)">
+        <ion-option value="8">الشمس</ion-option>
+        <ion-option value="9">القمر</ion-option>
         <ion-option value="0">عطارد</ion-option>
         <ion-option value="1">الزهرة</ion-option>
         <ion-option value="2">الأرض</ion-option>
