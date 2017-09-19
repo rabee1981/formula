@@ -774,7 +774,6 @@ var MyApp = (function () {
             id: banner,
             overlap: false,
             autoShow: true,
-            isTesting: true
         };
         this.admobFree.banner.config(adMobBannerOptions);
         this.admobFree.banner.prepare()

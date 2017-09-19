@@ -4,6 +4,13 @@ ion-navbar {
 }
 ion-content {
     background-image: url('../assets/background/background.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+img {
+    width: 100%;
 }
 ion-title {
     padding-right: 40px!important;

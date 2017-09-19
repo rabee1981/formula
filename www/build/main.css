@@ -25209,6 +25209,11 @@ ion-navbar {
 
 ion-content {
   background-image: url("../assets/background/background.jpg");
+  background-size: cover;
+}
+
+img {
+  width: 100%;
 }
 
 ion-title {
